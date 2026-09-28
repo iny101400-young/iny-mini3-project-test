@@ -1,8 +1,26 @@
 # BuildWise Prototype v1 Decision Report
 
+## 0. 문서 역할
+
+이 문서는 Decision Report에 담을 내용의 원칙을 정리한다.
+
+Decision Report의 최종 화면 구조와 읽는 순서는
+`WIREFRAME_05_DECISION_REPORT.md`를 따른다.
+
+- Decision 화면(`WIREFRAME_04_DECISION.md`)은
+  전체 후보를 비교하고 탐색하는 작업 화면이다.
+- Decision Report는
+  결과를 읽고 회의·검토에 공유하기 위한 정리 화면이다.
+
+따라서 Report에서는 전체 후보 비교표를 그대로 보여 주지 않고,
+우선 검토할 후보를 Candidate Shortlist로 정리한다.
+
 ## 1. 한 줄 판단
 
 사용자 조건을 바탕으로 현재 상태를 한 문장으로 요약한다.
+
+Report에서는 한 줄 판단과 Recommended Direction을
+Executive Summary로 묶어 가장 먼저 보여 준다.
 
 가능한 표현:
 
@@ -35,22 +53,40 @@
 예:
 
 - 기존 SaaS 우선 검토
-- 기존 SaaS 후보 검토 + 미확인 조건 추가 확인
-- 현재 예산 조건 조정 후 재검토
+- 기존 SaaS 후보 검토 + 추가 확인
+- 예산 조건 조정 후 재검토
 
 현재 데이터에 없는 사실은 만들지 않는다.
 
-## 5. Candidate Comparison
+Report에서는 Executive Summary 안에 포함한다.
 
-각 후보마다 아래 항목을 보여 준다.
+## 5. Candidate Shortlist
+
+Decision 화면의 전체 비교표를 그대로 복사하지 않는다.
+
+실무자가 우선 검토할 후보를 읽기 쉽게 정리한다.
+
+후보별 표시 항목:
 
 - 제품명
 - 가격
 - 가격 원문
 - 출처 인용 상태
 - OCR 상태
-- 최종 상태
+- 현재 조건 결과
+- 확인 필요 항목
 - `detail_url`
+
+임의의 추천 점수나 순위를 만들지 않는다.
+
+후보는 아래 순서로 묶어 보여 줄 수 있다.
+
+1. 모든 필수 조건이 확인된 후보
+2. 추가 확인이 필요한 후보
+
+한 줄 판단이 "현재 조건에서 후보 없음"이면
+Candidate Shortlist를 표시하지 않는다.
+빈 표나 대체 후보도 보여 주지 않는다.
 
 ## 6. Evidence
 
@@ -68,7 +104,7 @@ EDA에서 실제 확인한 시장 참고 정보는
 ### 현재 확인된 사실
 
 - 정제 데이터 14개
-- 0~10 USD 구간 8개
+- $0 이상 $10 미만 후보 8개
 - Citation Yes 그룹 평균 8.46 USD
 - Citation No 그룹 평균 20.75 USD
 - No 그룹은 n=4이고 49 USD 값이 포함돼 평균에 크게 영향을 받을 수 있음

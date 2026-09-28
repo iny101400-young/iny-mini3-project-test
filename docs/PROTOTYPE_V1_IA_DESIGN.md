@@ -79,9 +79,13 @@ BuildWise의 제품 차별점을 설명해야 한다.
 - 출처 인용 필요 여부
 - OCR 필요 여부
 
-현재 데이터에 없는
-업무량, 사용자 수, 다중 PDF 비교 등은
+현재 데이터에 없는 아래 항목은
 입력 항목으로 만들지 않는다.
+
+- 업무 목적
+- 월 사용량
+- 사용자 수
+- 다중 PDF 비교
 
 CTA:
 
@@ -103,7 +107,7 @@ CTA:
 3. 후보 수 요약
 4. Recommended Direction
 5. Candidate Comparison
-6. Gap / 확인 필요
+6. Gap / 추가 확인
 7. Evidence
 8. Next Action
 
@@ -125,12 +129,20 @@ CTA:
 
 - Executive Summary
 - 입력 조건
-- Recommended Direction
-- Candidate Comparison
-- Gap / 추가 확인 필요
-- Evidence
+- 판단 숫자 요약
+- What We Know / What We Need to Check
+- Candidate Shortlist
+- Evidence Summary
+- Market Context
 - Next Action
-- 데이터 한계
+- Data Limit
+
+Recommended Direction은 Executive Summary 안에 포함한다.
+
+Report에서는 Decision 화면의 전체 비교표(Candidate Comparison)를
+그대로 쓰지 않고, 우선 검토할 후보를 Candidate Shortlist로 정리한다.
+
+최종 구조 기준은 `WIREFRAME_05_DECISION_REPORT.md`를 따른다.
 
 현재 v1에서는 PDF 다운로드 기능을 아직 구현한다고 확정하지 않는다.
 우선 웹에서 읽기 좋은 리포트 형태를 목표로 한다.
@@ -166,9 +178,13 @@ Home
 Evidence는 BuildWise의 핵심 차별점인
 근거 추적성을 보여 주는 메뉴다.
 
-다만 v1에서 별도 Evidence 페이지를 만들지 여부는
-화면 설계 단계에서 다시 판단한다.
-현재는 Navigation 후보로만 기록한다.
+현재 Prototype v1에서는 별도 Evidence 페이지를 만들지 않는다.
+
+Navigation의 Evidence는 별도 페이지가 아니라
+Home 화면의 Evidence Preview 영역으로 이동하는
+섹션 앵커 역할을 한다.
+
+향후 별도 Evidence 페이지는 확장 가능성으로만 남긴다.
 
 ## 5. Design Direction
 
