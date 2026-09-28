@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How it works · BuildWise Prototype v1</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="visually-hidden" href="#main">본문 바로가기</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html">
+        <span class="brand__name">BuildWise</span>
+        <span class="brand__tag">Prototype v1</span>
+      </a>
+      <nav class="nav" aria-label="주요 메뉴">
+        <a class="nav__link" href="index.html">Home</a>
+        <a class="nav__link" href="how-it-works.html" aria-current="page">How it works</a>
+        <a class="nav__link" href="compare.html">Compare</a>
+        <a class="nav__link" href="index.html#evidence">Evidence</a>
+      </nav>
+      <a class="btn btn--primary btn--sm site-header__cta" href="compare.html">조건 비교 시작</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- 2. Intro -->
+    <section class="section">
+      <div class="container">
+        <span class="eyebrow">How it works</span>
+        <h1 class="page-title">
+          어떤 AI를 쓸지 고르기 전에,<br>
+          우리 업무에 무엇이 필요한지부터 정리합니다.
+        </h1>
+        <div class="tags mt-5" aria-label="판단 순서">
+          <span class="tag">조건 정의</span><span class="small">→</span>
+          <span class="tag">시장 비교</span><span class="small">→</span>
+          <span class="tag">Gap 확인</span><span class="small">→</span>
+          <span class="tag">Decision Report</span>
+        </div>
+        <p class="lead">BuildWise는 이 순서로 판단을 구조화합니다.</p>
+      </div>
+    </section>
+
+    <!-- 3~6. 4단계 흐름 -->
+    <section class="section section--neutral">
+      <div class="container">
+        <ol class="flow">
+          <li class="flow__step">
+            <span class="flow__no">01</span>
+            <div class="flow__card">
+              <h2 class="flow__title">우리 업무 조건을 먼저 정의합니다</h2>
+              <p class="flow__desc">현재 v1에서는 실제 데이터로 비교 가능한 항목만 사용합니다.</p>
+              <div class="flow__aux">
+                <span class="flow__aux-label">v1 입력</span>
+                <div class="tags">
+                  <span class="tag">월 예산 (USD)</span>
+                  <span class="tag">출처 인용 필요 여부</span>
+                  <span class="tag">OCR 필요 여부</span>
+                </div>
+              </div>
+              <div class="flow__aux">
+                <span class="flow__aux-label">현재 데이터로 검증할 수 없어 v1 입력값으로 사용하지 않음</span>
+                <div class="tags">
+                  <span class="tag tag--muted">업무 목적</span>
+                  <span class="tag tag--muted">월 사용량</span>
+                  <span class="tag tag--muted">사용자 수</span>
+                  <span class="tag tag--muted">다중 PDF 비교</span>
+                </div>
+              </div>
+              <p class="flow__principle">
+                필요한 조건을 먼저 정의해야 좋아 보이는 제품이 아니라
+                우리 상황에 맞는 후보를 찾을 수 있습니다.
+              </p>
+            </div>
+          </li>
+
+          <li class="flow__step">
+            <span class="flow__no">02</span>
+            <div class="flow__card">
+              <h2 class="flow__title">같은 기준으로 기존 솔루션을 비교합니다</h2>
+              <p class="flow__desc">현재 정제된 PDF AI 데이터 14개를 동일한 조건으로 비교합니다.</p>
+              <div class="flow__aux">
+                <span class="flow__aux-label">비교 기준</span>
+                <div class="tags">
+                  <span class="tag">가격</span>
+                  <span class="tag">출처 인용 확인 상태</span>
+                  <span class="tag">OCR 확인 상태</span>
+                  <span class="tag">원문 가격</span>
+                  <span class="tag">원문 출처</span>
+                </div>
+              </div>
+              <p class="flow__principle">
+                기능 표시가 없다고 “미지원”으로 단정하지 않고,
+                확인되지 않은 정보는 “확인 필요”로 남깁니다.
+              </p>
+            </div>
+          </li>
+
+          <li class="flow__step">
+            <span class="flow__no">03</span>
+            <div class="flow__card">
+              <h2 class="flow__title">맞는 것과 더 확인할 것을 나눕니다</h2>
+              <p class="flow__desc">각 후보를 단순 점수로 줄 세우지 않고, 조건별 상태를 분리해서 보여 줍니다.</p>
+              <div class="flow__aux">
+                <div class="status-counts">
+                  <div class="status-counts__item">
+                    <span class="badge badge--ok"><span class="badge__icon" aria-hidden="true">✓</span>충족</span>
+                    <span class="small">어떤 조건은 충족됐는지</span>
+                  </div>
+                  <div class="status-counts__item">
+                    <span class="badge badge--check"><span class="badge__icon" aria-hidden="true">?</span>확인 필요</span>
+                    <span class="small">어떤 조건은 확인이 필요한지</span>
+                  </div>
+                  <div class="status-counts__item">
+                    <span class="badge badge--over"><span class="badge__icon" aria-hidden="true">!</span>예산 초과</span>
+                    <span class="small">어떤 후보가 예산을 넘는지</span>
+                  </div>
+                </div>
+              </div>
+              <p class="flow__principle">모르는 것을 없는 것처럼 판단하지 않습니다.</p>
+            </div>
+          </li>
+
+          <li class="flow__step">
+            <span class="flow__no">04</span>
+            <div class="flow__card">
+              <h2 class="flow__title">검색 결과를 의사결정 가능한 리포트로 정리합니다</h2>
+              <div class="flow__aux">
+                <span class="flow__aux-label">Decision Report 구성</span>
+                <div class="tags">
+                  <span class="tag">Executive Summary</span>
+                  <span class="tag">입력 조건</span>
+                  <span class="tag">판단 숫자 요약</span>
+                  <span class="tag">What We Know / What We Need to Check</span>
+                  <span class="tag">Candidate Shortlist</span>
+                  <span class="tag">Evidence Summary</span>
+                  <span class="tag">Market Context</span>
+                  <span class="tag">Next Action</span>
+                  <span class="tag">Data Limit</span>
+                </div>
+                <p class="small mt-2">Executive Summary = 한 줄 판단 + Recommended Direction</p>
+              </div>
+              <p class="flow__principle">
+                실무자가 다시 엑셀이나 문서로 정리하지 않아도
+                회의·검토에 바로 활용할 수 있는 상태를 만듭니다.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 7. Before / After -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Before / After</span>
+          <h2 class="section-title">판단 과정이 이렇게 달라집니다</h2>
+        </div>
+        <div class="compare-flow">
+          <div class="compare-flow__col compare-flow__col--before">
+            <div class="compare-flow__head">
+              <h3 class="block-title">기존 방식</h3>
+            </div>
+            <ol class="steps-mini steps-mini--muted">
+              <li>검색</li>
+              <li>제품별 기능 확인</li>
+              <li>가격 다시 확인</li>
+              <li>비교표 작성</li>
+              <li>빠진 기능 다시 확인</li>
+              <li>구매/개발 논의</li>
+            </ol>
+          </div>
+          <div class="compare-flow__arrow" aria-hidden="true">→</div>
+          <div class="compare-flow__col compare-flow__col--after">
+            <div class="compare-flow__head">
+              <h3 class="block-title">BuildWise</h3>
+            </div>
+            <ol class="steps-mini">
+              <li>조건 입력</li>
+              <li>동일 기준 비교</li>
+              <li>충족 / 확인 필요 구분</li>
+              <li>근거 확인</li>
+              <li>Decision Report</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. CTA -->
+    <section class="cta-band">
+      <div class="container cta-band__inner">
+        <p class="cta-band__title">이제 우리 조건으로 직접 비교해 보세요.</p>
+        <a class="btn btn--primary" href="compare.html">조건 비교 시작</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div>
+        <p class="site-footer__brand">BuildWise</p>
+        <p>BuildWise Prototype v1 · PDF 문서 검토 업무 PoC</p>
+      </div>
+      <div class="site-footer__poc">
+        <span>Prototype for HIMEC document review</span>
+        <img src="assets/brand/himec-logo-on-dark.png" alt="HIMEC" width="94" height="22">
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

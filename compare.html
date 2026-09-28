@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Compare · BuildWise Prototype v1</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="visually-hidden" href="#main">본문 바로가기</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html">
+        <span class="brand__name">BuildWise</span>
+        <span class="brand__tag">Prototype v1</span>
+      </a>
+      <nav class="nav" aria-label="주요 메뉴">
+        <a class="nav__link" href="index.html">Home</a>
+        <a class="nav__link" href="how-it-works.html">How it works</a>
+        <a class="nav__link" href="compare.html" aria-current="page">Compare</a>
+        <a class="nav__link" href="index.html#evidence">Evidence</a>
+      </nav>
+      <a class="btn btn--primary btn--sm site-header__cta" href="compare.html">조건 비교 시작</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- 2. Intro -->
+    <section class="section section--tight">
+      <div class="container">
+        <span class="eyebrow">Compare</span>
+        <h1 class="page-title">우리 업무에 필요한 조건을 입력해 주세요.</h1>
+        <p class="lead">
+          현재 Prototype v1은 PDF 문서 검토 AI를 예산, 출처 인용, OCR 기준으로 비교합니다.
+          현재 데이터로 검증할 수 없는 조건은 입력값으로 받지 않습니다.
+        </p>
+      </div>
+    </section>
+
+    <section class="section section--tight section--neutral">
+      <div class="container">
+        <!-- 입력 3개: 모두 입력해야 Decision으로 이동 (기본 선택값 없음).
+             JS가 없으면 브라우저 기본 required 검사로 동작한다. -->
+        <form class="compare-layout" id="compare-form" action="decision.html" method="get">
+          <div>
+            <!-- 3. 월 예산 -->
+            <div class="input-block" id="block-budget">
+              <span class="input-block__no" aria-hidden="true">01</span>
+              <div>
+                <label class="field__label" for="budget">월 예산</label>
+                <p class="field__help">현재 데이터의 유료 요금제 시작가와 비교합니다.</p>
+                <div class="input-affix">
+                  <span class="input-affix__prefix" aria-hidden="true">$</span>
+                  <input class="input" id="budget" name="budget" type="number"
+                         inputmode="decimal" min="0.01" step="0.01" placeholder="10" required
+                         aria-describedby="error-budget">
+                  <span class="input-affix__suffix">USD / 월</span>
+                </div>
+                <p class="field__error" id="error-budget" role="alert" hidden></p>
+                <ul class="field__note">
+                  <li>일부 가격은 연간 결제 기준 월 환산 금액일 수 있음</li>
+                  <li>일부 가격은 사용자당 요금일 수 있음</li>
+                  <li>최종 도입 전 상세 요금제 확인이 필요함</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- 4. 출처 인용 -->
+            <div class="input-block" id="block-citation" role="group" aria-labelledby="q-citation" aria-describedby="error-citation">
+              <span class="input-block__no" aria-hidden="true">02</span>
+              <div>
+                <p class="field__label" id="q-citation">답변에 출처 인용 기능이 반드시 필요한가요?</p>
+                <p class="field__help">
+                  출처 인용은 AI 답변이 어떤 문서 내용에 근거했는지 확인하는 데 사용하는 기능입니다.
+                </p>
+                <div class="choice-group">
+                  <label class="choice">
+                    <input type="radio" name="citation" value="required" required>
+                    <span>필요함</span>
+                  </label>
+                  <label class="choice">
+                    <input type="radio" name="citation" value="optional">
+                    <span>상관없음</span>
+                  </label>
+                </div>
+                <p class="field__error" id="error-citation" role="alert" hidden></p>
+                <p class="field__note">
+                  상관없음: 기능이 필요 없다는 뜻이 아니라, 현재 비교에서 필수 조건으로 사용하지 않는다는 뜻입니다.
+                </p>
+              </div>
+            </div>
+
+            <!-- 5. OCR -->
+            <div class="input-block" id="block-ocr" role="group" aria-labelledby="q-ocr" aria-describedby="error-ocr">
+              <span class="input-block__no" aria-hidden="true">03</span>
+              <div>
+                <p class="field__label" id="q-ocr">스캔된 PDF나 이미지 기반 문서를 읽어야 하나요?</p>
+                <p class="field__help">
+                  OCR은 스캔된 문서나 이미지 속 글자를 텍스트로 인식하는 기능입니다.
+                </p>
+                <div class="choice-group">
+                  <label class="choice">
+                    <input type="radio" name="ocr" value="required" required>
+                    <span>필요함</span>
+                  </label>
+                  <label class="choice">
+                    <input type="radio" name="ocr" value="optional">
+                    <span>상관없음</span>
+                  </label>
+                </div>
+                <p class="field__error" id="error-ocr" role="alert" hidden></p>
+                <p class="field__note">
+                  상관없음: 기능이 필요 없다는 뜻이 아니라, 현재 비교에서 필수 조건으로 사용하지 않는다는 뜻입니다.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6~7. 입력 요약 Preview + Primary CTA -->
+          <aside class="summary-panel" aria-live="polite">
+            <p class="summary-panel__head">비교 조건</p>
+            <div class="summary-panel__body">
+              <ul class="summary-list">
+                <li><span class="summary-list__label">01 월 예산</span><span class="summary-list__value value-empty" id="sum-budget">미입력</span></li>
+                <li><span class="summary-list__label">02 출처 인용</span><span class="summary-list__value value-empty" id="sum-citation">미선택</span></li>
+                <li><span class="summary-list__label">03 OCR</span><span class="summary-list__value value-empty" id="sum-ocr">미선택</span></li>
+              </ul>
+              <button class="btn btn--primary btn--block mt-5" type="submit">우리 조건으로 비교하기</button>
+            </div>
+          </aside>
+        </form>
+      </div>
+    </section>
+
+    <!-- 8. Data Limit 안내 (문서형 유지) -->
+    <section class="section section--tight">
+      <div class="container">
+        <p class="supporting">
+          현재 Prototype v1은 공개된 가격·출처 인용·OCR 정보를 기준으로 비교합니다.
+          표시되지 않은 기능은 미지원으로 단정하지 않고 ‘확인 필요’로 표시합니다.
+        </p>
+        <ul class="list small mt-3">
+          <li>현재 가격은 유료 요금제 시작가 기준</li>
+          <li>일부 연간 결제 / 사용자당 가격 포함</li>
+          <li>사용량 한도와 사용자 수는 v1 판단에 포함하지 않음</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div>
+        <p class="site-footer__brand">BuildWise</p>
+        <p>BuildWise Prototype v1 · PDF 문서 검토 업무 PoC</p>
+      </div>
+      <div class="site-footer__poc">
+        <span>Prototype for HIMEC document review</span>
+        <img src="assets/brand/himec-logo-on-dark.png" alt="HIMEC" width="94" height="22">
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/compare.js"></script>
+</body>
+</html>

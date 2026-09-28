@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Decision Report · BuildWise Prototype v1</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="visually-hidden" href="#main">본문 바로가기</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html">
+        <span class="brand__name">BuildWise</span>
+        <span class="brand__tag">Prototype v1</span>
+      </a>
+      <nav class="nav" aria-label="주요 메뉴">
+        <a class="nav__link" href="index.html">Home</a>
+        <a class="nav__link" href="how-it-works.html">How it works</a>
+        <a class="nav__link" href="compare.html">Compare</a>
+        <a class="nav__link" href="index.html#evidence">Evidence</a>
+      </nav>
+      <a class="btn btn--primary btn--sm site-header__cta" href="compare.html">조건 비교 시작</a>
+    </div>
+  </header>
+
+  <!-- 문서형 Report 구조. .skeleton / "—" 자리는 다음 단계에서 판단 결과로 교체된다. -->
+  <main id="main">
+    <section class="section">
+      <div class="container">
+        <article class="doc">
+          <!-- 2. Report Header -->
+          <header>
+            <span class="eyebrow">BuildWise Decision Report</span>
+            <h1 class="page-title">PDF 문서 검토 AI 도입 판단</h1>
+            <dl class="doc-meta">
+              <div><dt>분석 대상</dt><dd>PDF 문서 검토 AI</dd></div>
+              <div><dt>생성 기준</dt><dd>사용자가 입력한 현재 조건</dd></div>
+              <div><dt>데이터 수집 시점</dt><dd class="value-empty">—</dd></div>
+              <div><dt>범위</dt><dd>Prototype v1 · 현재 수집한 표본 기준</dd></div>
+            </dl>
+          </header>
+
+          <!-- 3. Executive Summary (한 줄 판단 + Recommended Direction) -->
+          <section class="doc__section">
+            <h2>Executive Summary</h2>
+            <div class="highlight">
+              <p class="highlight__label">한 줄 판단</p>
+              <div class="mt-3" aria-hidden="true">
+                <span class="skeleton skeleton--lg w-60"></span>
+              </div>
+              <p class="highlight__label mt-5">Recommended Direction</p>
+              <div class="mt-3" aria-hidden="true">
+                <span class="skeleton w-90"></span>
+                <span class="skeleton w-75"></span>
+              </div>
+            </div>
+          </section>
+
+          <!-- 4. 입력 조건 -->
+          <section class="doc__section">
+            <h2>입력 조건</h2>
+            <div class="table-wrap">
+              <table class="table table--kv">
+                <tbody>
+                  <tr><th scope="row">월 예산</th><td class="value-empty">—</td></tr>
+                  <tr><th scope="row">출처 인용</th><td class="value-empty">—</td></tr>
+                  <tr><th scope="row">OCR</th><td class="value-empty">—</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <!-- 5. 판단 숫자 요약 -->
+          <section class="doc__section">
+            <h2>판단 숫자 요약</h2>
+            <div class="metrics metrics--4">
+              <div class="metric">
+                <span class="metric__value metric__value--empty">—</span>
+                <span class="metric__label">전체 비교 후보 수</span>
+              </div>
+              <div class="metric">
+                <span class="metric__value metric__value--empty">—</span>
+                <span class="metric__label">예산 내 후보 수</span>
+              </div>
+              <div class="metric">
+                <span class="metric__value metric__value--empty">—</span>
+                <span class="metric__label">모든 필수 조건이 확인된 후보 수</span>
+              </div>
+              <div class="metric">
+                <span class="metric__value metric__value--empty">—</span>
+                <span class="metric__label">추가 확인 필요 후보 수</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- 6. What We Know / What We Need to Check -->
+          <section class="doc__section">
+            <h2>What We Know / What We Need to Check</h2>
+            <div class="grid grid--2">
+              <div class="info-block info-block--known">
+                <h3 class="info-block__title">
+                  <span class="badge badge--ok"><span class="badge__icon" aria-hidden="true">✓</span>충족</span>
+                  현재 확인된 것
+                </h3>
+                <div class="mt-4" aria-hidden="true">
+                  <span class="skeleton w-75"></span>
+                  <span class="skeleton w-60"></span>
+                </div>
+              </div>
+              <div class="info-block info-block--gap">
+                <h3 class="info-block__title">
+                  <span class="badge badge--check"><span class="badge__icon" aria-hidden="true">?</span>확인 필요</span>
+                  추가 확인이 필요한 것
+                </h3>
+                <div class="mt-4" aria-hidden="true">
+                  <span class="skeleton w-75"></span>
+                  <span class="skeleton w-60"></span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 7. Candidate Shortlist (후보 없음 상태에서는 표시하지 않음) -->
+          <section class="doc__section">
+            <h2>Candidate Shortlist</h2>
+            <p class="small">모든 필수 조건이 확인된 후보 → 추가 확인이 필요한 후보 순으로 묶습니다. 순위나 추천 점수는 만들지 않습니다.</p>
+            <div class="table-wrap mt-4">
+              <table class="table table--wide">
+                <thead>
+                  <tr>
+                    <th scope="col">제품명</th>
+                    <th scope="col" class="num">가격 (USD/월)</th>
+                    <th scope="col">가격 원문</th>
+                    <th scope="col">출처 인용</th>
+                    <th scope="col">OCR</th>
+                    <th scope="col">현재 조건 결과</th>
+                    <th scope="col">확인 필요 항목</th>
+                    <th scope="col">원문 출처</th>
+                  </tr>
+                </thead>
+                <tbody aria-hidden="true">
+                  <tr>
+                    <td><span class="skeleton w-75"></span></td><td><span class="skeleton w-60"></span></td>
+                    <td><span class="skeleton w-90"></span></td><td><span class="skeleton w-60"></span></td>
+                    <td><span class="skeleton w-60"></span></td><td><span class="skeleton w-75"></span></td>
+                    <td><span class="skeleton w-60"></span></td><td><span class="skeleton w-45"></span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="skeleton w-60"></span></td><td><span class="skeleton w-45"></span></td>
+                    <td><span class="skeleton w-75"></span></td><td><span class="skeleton w-60"></span></td>
+                    <td><span class="skeleton w-60"></span></td><td><span class="skeleton w-75"></span></td>
+                    <td><span class="skeleton w-60"></span></td><td><span class="skeleton w-45"></span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <!-- 8. Evidence Summary -->
+          <section class="doc__section">
+            <h2>판단 근거</h2>
+            <div class="tags">
+              <span class="tag">데이터 출처</span>
+              <span class="tag">수집 시점</span>
+              <span class="tag">가격 원문</span>
+              <span class="tag">기능 확인 기준</span>
+              <span class="tag">제품별 detail_url</span>
+              <span class="tag">데이터 정제 기준</span>
+            </div>
+            <p class="supporting mt-4">
+              판단 결과뿐 아니라 그 판단이 어떤 데이터에서 나왔는지 다시 확인할 수 있습니다.
+            </p>
+          </section>
+
+          <!-- 9. Market Context -->
+          <section class="doc__section">
+            <h2>Market Context</h2>
+            <div class="grid grid--2">
+              <div class="panel">
+                <ul class="list supporting">
+                  <li>정제 데이터 14개</li>
+                  <li>$0 이상 $10 미만 후보 8개</li>
+                  <li>Citation Yes 그룹 평균 8.46 USD</li>
+                  <li>Citation No 그룹 평균 20.75 USD</li>
+                  <li>Citation No 그룹 n=4, 해당 그룹에 49 USD 값 포함</li>
+                </ul>
+              </div>
+              <!-- Citation Yes / No 평균 가격 비교: 구조만 두고 막대는 데이터 연결 단계에서 그린다 -->
+              <figure class="chart" aria-label="Citation Yes / No 평균 가격 비교">
+                <figcaption class="chart__title">Citation 여부별 평균 가격 (USD / 월)</figcaption>
+                <ul class="bar-rows">
+                  <li><span>Citation Yes</span><span class="bar-rows__track"></span></li>
+                  <li><span>Citation No</span><span class="bar-rows__track"></span></li>
+                </ul>
+              </figure>
+            </div>
+            <p class="small mt-3">
+              현재 수집한 표본 기준이며, PDF AI 전체 시장을 대표하지 않습니다.
+              Citation 평균 차이는 기능 유무가 가격 차이를 만들었다는 뜻이 아닙니다.
+            </p>
+          </section>
+
+          <!-- 10. Next Action -->
+          <section class="doc__section">
+            <h2>Next Action</h2>
+            <ul class="checklist" aria-hidden="true">
+              <li><span class="checklist__box"></span><span class="skeleton w-45"></span></li>
+              <li><span class="checklist__box"></span><span class="skeleton w-60"></span></li>
+              <li><span class="checklist__box"></span><span class="skeleton w-30"></span></li>
+            </ul>
+          </section>
+
+          <!-- 11. Data Limit / Disclaimer (문서형 유지) -->
+          <section class="doc__section">
+            <h2>Data Limit</h2>
+            <ul class="list small">
+              <li>현재 Prototype v1은 공개된 가격, Citation, OCR 정보를 기준으로 함</li>
+              <li>가격은 유료 요금제 시작가</li>
+              <li>일부 연간 결제 기준 월 환산 / 사용자당 가격 포함</li>
+              <li>기능 미표시는 미지원으로 단정하지 않음</li>
+              <li>사용량, 사용자 수, 보안 조건은 현재 판단 데이터에 포함되지 않음</li>
+              <li>최종 도입 전 공식 원문 확인 필요</li>
+            </ul>
+          </section>
+
+          <!-- 12. Report Actions (v1 확정 기능만) -->
+          <section class="doc__section">
+            <div class="actions">
+              <a class="btn btn--secondary" href="compare.html">조건 다시 비교하기</a>
+            </div>
+          </section>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div>
+        <p class="site-footer__brand">BuildWise</p>
+        <p>BuildWise Prototype v1 · PDF 문서 검토 업무 PoC</p>
+      </div>
+      <div class="site-footer__poc">
+        <span>Prototype for HIMEC document review</span>
+        <img src="assets/brand/himec-logo-on-dark.png" alt="HIMEC" width="94" height="22">
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

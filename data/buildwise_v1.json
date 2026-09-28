@@ -1,0 +1,128 @@
+[
+  {
+    "name": "AI PDF Reader",
+    "price": 0.99,
+    "price_raw": "Free plan · paid from $0.99/mo",
+    "citation": "Yes",
+    "ocr_raw": "Scanned PDF support",
+    "detail_url": "https://www.itechguides.com/products/ai-pdf-reader/",
+    "scraped_at": "2026-09-28T11:20:19+09:00"
+  },
+  {
+    "name": "Anara",
+    "price": 10.0,
+    "price_raw": "Free plan · paid from $10/user/mo (annual)",
+    "citation": "Yes",
+    "ocr_raw": "Scanned PDF support",
+    "detail_url": "https://www.itechguides.com/products/anara/",
+    "scraped_at": "2026-09-28T11:20:19+09:00"
+  },
+  {
+    "name": "docAnalyzer",
+    "price": 8.0,
+    "price_raw": "Free plan · paid from $8/mo",
+    "citation": "Yes",
+    "ocr_raw": "Scanned PDF support",
+    "detail_url": "https://www.itechguides.com/products/docanalyzer/",
+    "scraped_at": "2026-09-28T11:20:19+09:00"
+  },
+  {
+    "name": "PDF.chat",
+    "price": 5.0,
+    "price_raw": "Free plan · paid from $5/mo",
+    "citation": "Yes",
+    "ocr_raw": "Scanned PDF support",
+    "detail_url": "https://www.itechguides.com/products/pdf-chat/",
+    "scraped_at": "2026-09-28T11:20:19+09:00"
+  },
+  {
+    "name": "Sharly AI",
+    "price": 12.5,
+    "price_raw": "Free plan · paid from $12.50/user/mo (annual)",
+    "citation": "Yes",
+    "ocr_raw": "Scanned PDF support",
+    "detail_url": "https://www.itechguides.com/products/sharly-ai/",
+    "scraped_at": "2026-09-28T11:20:19+09:00"
+  },
+  {
+    "name": "pdfAssistant.ai",
+    "price": 9.99,
+    "price_raw": "Free plan · paid from $9.99/mo",
+    "citation": "No",
+    "ocr_raw": "Scanned PDF support",
+    "detail_url": "https://www.itechguides.com/products/pdfassistant-ai/",
+    "scraped_at": "2026-09-28T11:20:19+09:00"
+  },
+  {
+    "name": "AskYourPDF",
+    "price": 11.99,
+    "price_raw": "Free plan · paid from $11.99/mo (annual)",
+    "citation": "No",
+    "ocr_raw": null,
+    "detail_url": "https://www.itechguides.com/products/askyourpdf/",
+    "scraped_at": "2026-09-28T11:20:19+09:00"
+  },
+  {
+    "name": "ChatDOC",
+    "price": 8.99,
+    "price_raw": "Free plan · paid from $8.99/mo",
+    "citation": "Yes",
+    "ocr_raw": "Scanned PDF support",
+    "detail_url": "https://www.itechguides.com/products/chatdoc/",
+    "scraped_at": "2026-09-28T11:20:19+09:00"
+  },
+  {
+    "name": "Doxy",
+    "price": 4.99,
+    "price_raw": "Free plan · paid from $4.99/mo",
+    "citation": "Yes",
+    "ocr_raw": null,
+    "detail_url": "https://www.itechguides.com/products/doxy/",
+    "scraped_at": "2026-09-28T11:20:19+09:00"
+  },
+  {
+    "name": "ResearchPal AI Paraphraser",
+    "price": 8.25,
+    "price_raw": "Free plan · paid from $8.25/mo (annual)",
+    "citation": "Yes",
+    "ocr_raw": null,
+    "detail_url": "https://www.itechguides.com/products/researchpal-ai-paraphraser/",
+    "scraped_at": "2026-09-28T11:20:19+09:00"
+  },
+  {
+    "name": "Explainpaper",
+    "price": 16.0,
+    "price_raw": "Free plan · paid from $16/user/mo · 7-day trial",
+    "citation": "Yes",
+    "ocr_raw": null,
+    "detail_url": "https://www.itechguides.com/products/explainpaper/",
+    "scraped_at": "2026-09-28T11:20:19+09:00"
+  },
+  {
+    "name": "Audeus",
+    "price": 9.92,
+    "price_raw": "Free plan · paid from $9.92/mo (annual) · 3-day trial",
+    "citation": "Yes",
+    "ocr_raw": "Scanned PDF support",
+    "detail_url": "https://www.itechguides.com/products/audeus/",
+    "scraped_at": "2026-09-28T11:20:19+09:00"
+  },
+  {
+    "name": "PDF.ai API",
+    "price": 49.0,
+    "price_raw": "Free plan · paid from $49/mo",
+    "citation": "No",
+    "ocr_raw": null,
+    "detail_url": "https://www.itechguides.com/products/pdf-ai-api/",
+    "scraped_at": "2026-09-28T11:20:19+09:00"
+  },
+  {
+    "name": "Paperpal",
+    "price": 12.0,
+    "price_raw": "Free plan · paid from $12/user/mo (annual)",
+    "citation": "No",
+    "ocr_raw": null,
+    "detail_url": "https://www.itechguides.com/products/paperpal/",
+    "scraped_at": "2026-09-28T11:20:19+09:00"
+  }
+]
