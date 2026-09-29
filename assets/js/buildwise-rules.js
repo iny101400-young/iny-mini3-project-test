@@ -89,13 +89,35 @@
     return { edges: edges, counts: counts, outside: outside };
   }
 
+  // 현재 표본의 시장 참고 정보 (기존 EDA와 같은 방식으로 계산). 추천 점수에 사용하지 않는다.
+  function marketContext(items) {
+    function group(value) {
+      var prices = items.filter(function (it) { return it.citation === value; })
+        .map(function (it) { return it.price; });
+      var sum = prices.reduce(function (a, b) { return a + b; }, 0);
+      return {
+        n: prices.length,
+        mean: prices.length ? sum / prices.length : null,
+        max: prices.length ? Math.max.apply(null, prices) : null
+      };
+    }
+    var hist = priceHistogram(items);
+    return {
+      total: items.length,
+      // 첫 구간: $0 이상 $10 미만
+      firstBin: { from: hist.edges[0], to: hist.edges[1], count: hist.counts[0] },
+      citation: { yes: group("Yes"), no: group("No") }
+    };
+  }
+
   var api = {
     OCR_SUPPORTED: OCR_SUPPORTED,
     PRICE_EDGES: PRICE_EDGES,
     parseConditions: parseConditions,
     toQuery: toQuery,
     evaluate: evaluate,
-    priceHistogram: priceHistogram
+    priceHistogram: priceHistogram,
+    marketContext: marketContext
   };
 
   root.BuildWiseRules = api;

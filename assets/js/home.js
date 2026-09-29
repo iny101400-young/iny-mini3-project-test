@@ -23,6 +23,14 @@
       var hist = window.BuildWiseRules.priceHistogram(items);
       var max = Math.max.apply(null, hist.counts) || 1;
 
+      // Evidence Metric: 정제 데이터 수와 $0 이상 $10 미만 후보 수를 JSON에서 계산한다.
+      [["home-clean-count", items.length], ["home-low-count", hist.counts[0]]].forEach(function (pair) {
+        var el = document.getElementById(pair[0]);
+        if (!el) return;
+        el.textContent = String(pair[1]);
+        el.classList.remove("metric__value--empty");
+      });
+
       bars.innerHTML = hist.counts.map(function (count, i) {
         var label = binLabel(hist.edges, i) + ": " + count + "개";
         return '<div class="chart__bar" role="img" aria-label="' + label + '" title="' + label + '"' +

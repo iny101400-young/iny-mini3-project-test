@@ -289,6 +289,7 @@ figure { margin: 0; }
 /* 결론 강조 (Report) */
 .highlight { background: var(--c-primary-tint); border-left: 4px solid var(--c-navy); border-radius: var(--radius); padding: var(--space-5); }
 .highlight__label { font-size: var(--fs-small); font-weight: 700; color: var(--c-text-secondary); }
+.decision-title { font-size: clamp(1.25rem, 1.05rem + 0.8vw, 1.625rem); font-weight: 800; color: var(--c-navy); line-height: 1.35; }
 
 /* 번호 Anchor가 있는 질문 카드 */
 .q-card { padding: var(--space-5); background: var(--c-white); border: 1px solid var(--c-border); border-radius: var(--radius); }
@@ -424,6 +425,15 @@ figure { margin: 0; }
 .table tbody tr:hover { background: var(--c-neutral-soft); }
 .table--wide { min-width: 880px; }
 .table--kv th { width: 36%; }
+/* 문서형 Report 폭(880px) 안에서 가로 스크롤 없이 읽히는 밀도 */
+.table--dense { font-size: var(--fs-small); }
+.table--dense th,
+.table--dense td { padding: var(--space-3) var(--space-2); }
+.table--dense th:first-child,
+.table--dense td:first-child { padding-left: var(--space-4); }
+.table--dense .cell-name { white-space: normal; min-width: 96px; }
+.table--dense .cell-raw { min-width: 0; max-width: 150px; }
+.table--dense .badge { padding: 1px 8px 1px 4px; }
 
 /* ---------- 11. Process / Flow ---------- */
 /* Home: 점과 선의 가로 흐름 */
@@ -497,8 +507,10 @@ figure { margin: 0; }
 .chart__ticks { display: flex; justify-content: space-between; margin-top: var(--space-2); font-size: var(--fs-small); color: var(--c-text-secondary); font-variant-numeric: tabular-nums; }
 .chart__axis { margin-top: var(--space-1); text-align: center; font-size: var(--fs-small); color: var(--c-text-muted); }
 .bar-rows { list-style: none; margin-top: var(--space-4); }
-.bar-rows li { display: grid; grid-template-columns: 96px minmax(0, 1fr); align-items: center; gap: var(--space-3); padding: var(--space-2) 0; font-size: var(--fs-supporting); font-weight: 600; color: var(--c-navy); }
-.bar-rows__track { height: 14px; border-radius: 2px; background: var(--c-neutral-soft); border: 1px solid var(--c-divider); }
+.bar-rows li { display: grid; grid-template-columns: 96px minmax(0, 1fr) 76px; align-items: center; gap: var(--space-3); padding: var(--space-2) 0; font-size: var(--fs-supporting); font-weight: 600; color: var(--c-navy); }
+.bar-rows__track { position: relative; height: 14px; border-radius: 2px; background: var(--c-neutral-soft); border: 1px solid var(--c-divider); overflow: hidden; }
+.bar-rows__fill { position: absolute; inset: 0 auto 0 0; width: 0; background: var(--c-primary); }
+.bar-rows__value { text-align: right; font-weight: 800; font-variant-numeric: tabular-nums; }
 
 /* 상태 Count 요약 */
 .status-counts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-3); }

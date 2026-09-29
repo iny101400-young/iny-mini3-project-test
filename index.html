@@ -153,16 +153,18 @@
         </div>
 
         <div class="metrics metrics--3">
+          <!-- 27은 원본 수집 행 수(data/raw.csv)로, buildwise_v1.json에 없는 값이라 정적으로 둔다.
+               14와 8은 assets/js/home.js가 buildwise_v1.json에서 계산한다. -->
           <div class="metric">
             <span class="metric__value">27</span>
             <span class="metric__label">원본 솔루션</span>
           </div>
           <div class="metric">
-            <span class="metric__value">14</span>
+            <span class="metric__value metric__value--empty" id="home-clean-count">—</span>
             <span class="metric__label">비교 가능한 정제 데이터</span>
           </div>
           <div class="metric">
-            <span class="metric__value">8</span>
+            <span class="metric__value metric__value--empty" id="home-low-count">—</span>
             <span class="metric__label">$0 이상 $10 미만 후보</span>
           </div>
         </div>
